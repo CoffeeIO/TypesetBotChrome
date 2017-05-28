@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+
+    "name": "TypesetBotChrome",
+    "description": "Chrome Extension typesetting websites with TypesetBot",
+    "version": "1.0.0",
+
+    "author":"Mathias Grundtvig Andreasen (MGApcDev)",
+
+    "permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "css": ["/node_modules/typesetbot/dist/main.min.css"],
+            "js": [
+                "/node_modules/typesetbot/dist/mainWithPatterns.min.js",
+                "main.js"
+            ]
+        }
+    ]
+}
